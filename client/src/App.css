@@ -1,3 +1,52 @@
-.App {
-  text-align: center;
+.header {
+  background-color: orange;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 15px;
+}
+
+.column1 {
+  float: left;
+  margin-top: 100px;
+  margin-left: 10px;
+  width: 15%;
+}
+
+.column2 {
+  float: left;
+  margin-top: 200px;
+  margin-left: 100px;
+  width: 65%;
+}
+
+.block {
+  padding: 5px;
+  margin: 5px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: gray;
+}
+
+.block:hover {
+  border-color: red;
+}
+
+.vl {
+  float: left;
+  border-left: 1px gray groove;
+  height: 550px;
+  margin-top: 100px;
+  margin-left: 50px;
+}
+
+input {
+  font-size: 300%
+}
+
+textarea {
+  overflow-y: scroll;
+  height: 350px;
+  width: 70%;
+  resize: none;
 }

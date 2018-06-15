@@ -15,35 +15,35 @@ app.use(bodyParser.urlencoded({'extended':'false'}));
 
 app.listen(3125);
 
-app.get('/', function(req, res, next) {
+app.get('/articles', function(req, res, next) {
   Article.find(function (err, data) {
     if (err) return next(err);
     res.json(data);
   });
 });
 
-app.get('/:id', function(req, res, next) {
+app.get('/articles/:id', function(req, res, next) {
   Article.findById(req.params.id, function (err, data) {
     if (err) return next(err);
     res.json(data);
   });
 })
 
-app.post('/', function(req, res, next) {
+app.post('/articles', function(req, res, next) {
   Article.create(req.body, function (err, post) {
     if (err) return next(err);
     res.json(post);
   });
 });
 
-app.put('/:id', function(req, res, next) {
-  Article.findByIdAndUpdate(req.params.id, req.body, function (err, post) {
+app.put('/articles/:id', function(req, res, next) {
+  Article.findByIdAndUpdate(req.params.id, req.body, function (err, put) {
     if (err) return next(err);
-    res.json(post);
+    res.json(put);
   });
 });
 
-app.delete('/:id', function(req, res, next) {
+app.delete('/articles/:id', function(req, res, next) {
   Article.findByIdAndRemove(req.params.id, req.body, function (err, del) {
     if (err) return next(err);
     res.json(del);
