@@ -40,13 +40,28 @@
   margin-left: 50px;
 }
 
-input {
-  font-size: 300%
+.Titlein {
+  font-size: 250%
 }
 
 textarea {
   overflow-y: scroll;
-  height: 350px;
+  height: 330px;
   width: 70%;
   resize: none;
+}
+
+h3 {
+  float: left;
+  padding: 10px;
+  position: relative;
+  left: 200px;
+}
+
+#log {
+  font-size: 150%;
+  margin-top: 20px;
+  padding: 5px;
+  position: relative;
+  left: 200px;
 }
